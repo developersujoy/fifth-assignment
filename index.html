@@ -6,9 +6,58 @@
     <title>Document</title>
     <!-- custom css -->
      <link rel="stylesheet" href="./style/style.css">
-     
+     <!-- font connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyui and tailwind -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/tailwind.css"> -->
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
 </head>
-<body>
-    
+<body >
+<section class="bg-[#F8FAFC] flex justify-center items-center min-h-screen">
+        <div class=" mx-auto  p-8 bg-white shadow-md rounded-[8px]">
+            <div class="flex flex-col items-center text-center ">
+                <div>
+                <img src="./assets/github-logo.png" alt="github-logo" title="GitHub"> </div>
+                <div >
+                <h2 class="font-semibold text-[24px] mt-6">GitHub Issues Tracker</h2>
+                <p class="text-[16px] text-[#64748B]">Sign in to manage your issues</p> </div>
+            </div>
+        <form class="w-xs my-6" >
+            <label class="label text-[16px] text-[#1F2937] font-medium">Username</label>
+            <input id="Username" type="email" class="input mt-2 mb-1.5 rounded-[8px]" placeholder="Email" />
+            <p class="text-[14px] text-[#4A00FF] font-normal mb-4">Default: admin</p>
+        
+            <label class="label text-[16px] text-[#1F2937] font-medium">Password</label>
+            <input id="password" type="password" class="input mt-2 mb-1.5 rounded-[8px]" placeholder="Password" />
+            <p class="text-[14px] text-[#4A00FF] font-normal mb-6">Default: admin123</p>
+        
+            <button id="login-btn" class="btn bg-[#4A00FF] text-white mt-4 w-full rounded-[8px]">Login</button>
+        </form>
+
+        <div class="flex  items-center my-6">
+            <hr class="flex-grow border-gray-300">
+            <span class="mx-2 text-[#64748B] text-sm">OR</span>
+            <hr class="flex-grow border-gray-300">
+        </div>
+        <div class="bg-[#F8FAFC] rounded-[8px] p-6 text-center">
+            <p class="font-bold text-[16px]">Username: <span class="font-normal">admin </span></p>
+            <p class="font-bold text-[16px]">Password: <span class="font-normal"> admin123 </span> </p>
+        </div>
+        </div>
+</section>
+        <script src="./js/login.js"></script>
 </body>
-</html>
+</html> 
