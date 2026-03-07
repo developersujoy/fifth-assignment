@@ -18,7 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-[#F8FAFC] min-h-screen">
+<body class="bg-[#F8FAFC] min-h-screen pb-1">
     <header>
         <div class="navbar bg-base-100 shadow-sm px-10 flex-col  md:flex-row space-y-5 md:space-y-0 bg-[#FFFFFF]">
             <div class="flex-1  ">
@@ -43,11 +43,11 @@
             </div>
         </div>
     </header>
-    <main class="max-w-7xl border border-yellow-400 mx-auto my-[60px]">
+    <main class="max-w-7xl border border-[#E4E4E7] shadow-sm mx-auto my-[60px]">
 
         <!-- catagories section  -->
         <section id="CatagoriesSection" class="p-6 border-white space-x-2 rounded-lg bg-white">
-            <button id="allBtn" class="btn  btn-primary border-[#E4E4E7] w-[120px] py-3">All</button>
+            <button id="allBtn" class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">All</button>
             <button id="openBtn" class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">Open</button>
             <button id="closedBtn" class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">Closed</button>
         </section>
@@ -58,7 +58,7 @@
                 <img src="./assets/Aperture.png" alt="">
                 </div>
                 <div>
-                    <h4 class="font-semibold text-[20px]">50 Issues</h4>
+                    <h4 id="issueCount" class="font-semibold text-[20px]"></h4>
                     <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
                 </div>
             </div>
