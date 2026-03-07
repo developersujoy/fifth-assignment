@@ -47,9 +47,9 @@
 
         <!-- catagories section  -->
         <section id="CatagoriesSection" class="p-6 border-white space-x-2 rounded-lg bg-white">
-            <button onclick="showAll()" class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">All</button>
-            <button class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">Open</button>
-            <button class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">Closed</button>
+            <button id="allBtn" class="btn  btn-primary border-[#E4E4E7] w-[120px] py-3">All</button>
+            <button id="openBtn" class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">Open</button>
+            <button id="closedBtn" class="btn btn-outline btn-primary border-[#E4E4E7] w-[120px] py-3">Closed</button>
         </section>
         <!-- section 2 -->
         <section class="p-6 border-b  border-b-[#E4E4E7] space-x-2 rounded-lg bg-white mt-4 flex justify-between items-center">
@@ -61,6 +61,9 @@
                     <h4 class="font-semibold text-[20px]">50 Issues</h4>
                     <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
                 </div>
+            </div>
+            <div id="loadingSpinner" class="col-span-full hidden justify-center items-center align-middle">
+                <span class="loading loading-spinner loading-md"></span>
             </div>
             <div class=" flex gap-4">
                 <div class="flex items-center gap-2">
@@ -77,28 +80,8 @@
         <!-- all cards  -->
         <section id="itemlists" class="py-[27px] px-6 border border-white  rounded-lg bg-[border-radius: 0 0 8px 8px;
 background: #FBFBFB] grid grid-cols-4 gap-6">
-            <div class="card bg-base-100 w-full shadow-sm">
-                <div>
-                    <div class="flex justify-between p-4">
-                        <div>
-                            <img src="./assets/Open-Status.png" alt="" srcset="">
-                        </div>
-                
-                            <div class="p-2 w-20 items-center justify-center h-6 rounded-full bg-[#FEECEC] flex">
-                                <p class="text-[12px] font-medium">HIGH</p>
-                            </div>
-                    </div>
-                    
-                </div>
-                    
-                <div class="card-body">
-                    <h2 class="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div>
+        <!-- card  -->
+          
         </section>
     </main>
     <script src="./js/home.js"></script>
