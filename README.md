@@ -1,7 +1,9 @@
 - 1️⃣ What is the difference between var, let, and const?
 
 var: It is a golbal scope variable, it can be re-declard & upadate.
+
 Const: Its is a block scope variable, normally we can say that it cannnot be re-declared or update.
+
 Let: It is a block scope variable, we cannot re-declare but can can update.
 
 
