@@ -25,6 +25,6 @@ Arrow function is a shorter and clean version to write a funtion in javaScript. 
 
 - 5️⃣ What are template literals?
 
-Template literals cames with ES6 model where we can use backticks ` ` insted of single (' ') or double (" ") quotes.Through this we can write whole  html code without facing problems. 
+Template literals cames with ES6 model where we can use backticks (` `) insted of single (' ') or double (" ") quotes.Through this we can write whole  html code without facing problems. 
 
 
