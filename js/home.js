@@ -8,7 +8,8 @@
     const openBtn = document.getElementById("openBtn");
     const issueCount = document.getElementById("issueCount");
     const itemlist = document.getElementById("itemlists");
-    
+    const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn")
 
     async function LoadCatagories(){
     loadingSpinner.classList.remove("hidden");
@@ -67,7 +68,7 @@ const displayingwords = (words) => {
 
         cards.innerHTML= `
          <dialog id="my_modal_1" class="modal">
-            <div class="modal-box w-[700px] max-w-none rounded-[12px] ">
+            <div class="modal-box md:w-[700px]  max-w-none rounded-[12px] ">
                 <!-- div one  -->
                 <div>
                     <h3 class="text-[24px] font-bold mb-2"> ${words.title} </h3>
@@ -224,6 +225,31 @@ const displayingwords = (words) => {
         setActive(closedBtn);
         console.log(closeissue);
     })
+
+    // search function
+    async function searchIssue() {
+        const searchText = searchInput.value;
+        const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+       
+        displaydata(data.data);
+        issueCount.innerText = `${data.data.length} Issues`;
+    }
+
+    // on btuuon click call the seachissue function
+    searchBtn.addEventListener("click", function (){
+        searchIssue();
+    } );
+
+    // on enter click in keyborad call the searchissue function
+        searchInput.addEventListener("keyup", function(e){
+            if ( e.key === "Enter"){
+                searchIssue();
+            }
+        });
+
 
 
 LoadCatagories()
