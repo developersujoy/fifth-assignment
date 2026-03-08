@@ -11,6 +11,8 @@
     const searchInput = document.getElementById("searchInput");
     const searchBtn = document.getElementById("searchBtn")
 
+
+    // fentch api for all cards and show spinner when loading
     async function LoadCatagories(){
     loadingSpinner.classList.remove("hidden");
     loadingSpinner.classList.add("flex");
@@ -132,13 +134,7 @@ const displayingwords = (words) => {
 
 
 
-
-
-
-
-   
-
-
+   // all cards are dyanmically set according to all functions
     function displaydata(allissues) {
         console.log(allissues);
         itemlist.innerHTML = " "; // emty html
@@ -240,14 +236,23 @@ const displayingwords = (words) => {
 
     // on btuuon click call the seachissue function
     searchBtn.addEventListener("click", function (){
-        searchIssue();
+        if (searchInput.value === "" ){
+            LoadCatagories();
+        }else {
+            searchIssue();
+        }
     } );
 
     // on enter click in keyborad call the searchissue function
         searchInput.addEventListener("keyup", function(e){
             if ( e.key === "Enter"){
-                searchIssue();
-            }
+                if (searchInput.value === "") {
+                    LoadCatagories();
+                } else {
+                    searchIssue();
+                }
+
+            } 
         });
 
 
