@@ -43,7 +43,7 @@
             // create element 
         const card = document.createElement("div");
             card.innerHTML =`
-            <div class="card bg-base-100 w-full h-full shadow-sm">
+            <div class="card bg-base-100 w-full h-full shadow-sm border-t-3 ${issue.status == "open" ? "border-[#00A96E]" : "border-[#A855F7]"} hover:cursor-pointer" onclick="my_modal_1.showModal()" >
                     <div class="p-4">
                         <div class="flex justify-between ">
                             <div>
@@ -60,8 +60,20 @@
                             <p class="text-[12px] text-[#64748B] line-clamp-2 "> ${issue.description} </p>
                         </div>
                         <div class="flex mt-3 gap-1">
-                            <div><img src="./assets/Labels.png" alt="" srcset=""></div>
-                            <div><img src="./assets/Labels (1).png" alt="" srcset=""></div>
+                            <div class="p-2 items-center justify-center h-6 gap-1 rounded-full flex ${ issue.labels[0] == "bug" ? "bg-[#FEECEC] text-[#EF4444]" : issue.labels[0] == "documentation" ? "bg-[#FFF6D1] text-[#F59E0B]" : issue.labels[0] == "enhancement" ? "bg-[#BBF7D0] text-[#00A96E]" : "bg-[#BDF0DD] text-[#2890B0]"}">
+                               <img src=" ${issue.labels[0] === "bug"
+                ? "./assets/vector.png" : issue.labels[0] == "documentation" ? "./assets/Lifebuoy.png" : issue.labels[0] == "enhancement" ? "./assets/Sparkle.png ":  " "} " alt="">
+                                <p class="text-[12px] font-medium uppercase"> ${issue.labels[0]} </p>
+                            </div>
+
+                            <div class="p-2  items-center justify-center h-6 rounded-full ${issue.labels[1] == null ? " hidden" : "flex "}
+                            ${ issue.labels[1] == "bug" ? "bg-[#FEECEC] text-[#EF4444]" : issue.labels[1] == "documentation" ? "bg-[#FFF6D1] text-[#F59E0B]" : issue.labels[1] == "enhancement" ? "bg-[#BBF7D0] text-[#00A96E]" : "bg-[#BDF0DD] text-[#2890B0]"}">
+                                <img src=" ${issue.labels[1] === "bug"
+                    ? "./assets/vector.png" : issue.labels[1] == "documentation" ? "./assets/Lifebuoy.png" : issue.labels[1] == "enhancement" ? "./assets/Sparkle.png " : " "} " alt="">
+                                <p class="text-[12px] font-medium uppercase"> ${issue.labels[1]} </p>
+                            </div>
+
+
                         </div>
                     </div>
                     <hr class=" border-gray-300">
